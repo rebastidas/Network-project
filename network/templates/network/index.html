@@ -1,0 +1,58 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+        <!--POSTFORM-->
+        <div class="col-md-6 offset-md-3">
+            <form action="" id="pf-1">
+                <div class="form-group">
+                    <textarea class="form-control" aria-label="With textarea" rows="7" id="pbody"></textarea>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+        </div>
+    {% endif %}
+
+    <!--PROFILE-->
+    <div class="col-md-6 offset-md-3" id=pd>
+        <div class="card" style="width: 100%;">
+            <!--<img src="https://source.unsplash.com/dLij9K4ObYY" class="card-img-top" alt="...">-->
+            <div class="card-body">
+              <h5 class="card-title text-capitalize" id="profile"><strong><!--ProfileNameHere--></strong></h5>
+              <p class="card-text">USER DESCRIPTION GOES HERE</p>
+                <div class="d-flex flex-row" >
+                    <div class="p-2"><p><strong id="following"></strong> Following</p></div>
+                    <div class="p-2 ml-2"><p><strong id="followers"></strong> Followers</p></div>
+                    {% if user.is_authenticated %}
+                        <div class="ml-2"><button class="btn btn-primary" id="flwbtn"></button></div>
+                    {% endif%}
+                </div>
+            </div>
+          </div>
+        <hr>
+    </div>
+
+    <div class="col-md-6 offset-md-3" id="p-roll">
+        <!--Posts Goes Here-->
+    </div>
+
+    <nav aria-label="Page navigation example" class="pagi">
+        <ul class="pagination justify-content-center">
+          <li class="page-item-previous">
+            <span class="page-link" tabindex="-1" aria-disabled="true">Previous</span>
+          </li>
+          <li class="page-item-next">
+            <span class="page-link" href="#">Next</span>
+          </li>
+        </ul>
+      </nav>
+      
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/main.js' %}"></script>
+{% endblock %}
+

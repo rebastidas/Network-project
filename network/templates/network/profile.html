@@ -1,0 +1,28 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+    <div class="col-md-6 offset-md-3">
+        <div class="card" style="width: 100%;">
+            <img src="https://source.unsplash.com/dLij9K4ObYY" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-capitalize" id="profile"><strong>{{ profile }}</strong></h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="d-flex">
+                    <p><strong>300K</strong>following</p>
+                    <p class="ml-2"><strong>300K</strong>followers</p>
+                </div>
+            </div>
+          </div>
+        <hr>
+    </div>
+    <div class="col-md-6 offset-md-3" id="p-roll">
+        <!--Post Goes Here-->
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/main.js' %}"></script>
+{% endblock %}
+

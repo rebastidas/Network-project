@@ -1,0 +1,39 @@
+.lup:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.page-link:hover{
+
+    cursor: pointer;
+
+}
+
+.btn-like:hover{
+
+    cursor: pointer;
+    color: pink;
+    border-radius: 50%;
+    transition: .5s;
+
+}
+
+.btn-edit:hover{
+    
+    color: skyblue;
+    transition: .5s;
+}
+
+#ap:hover{
+    
+    cursor: pointer;
+
+}
+
+#fllwp:hover{
+    
+    cursor: pointer;
+
+}
